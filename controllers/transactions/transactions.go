@@ -1,12 +1,15 @@
 package transactions
 
 import (
-	"challenge/models"
-	"challenge/controllers/database"
+	"github.com/gregoriof_challenge/models"
+	"github.com/gregoriof_challenge/controllers/database"
+	"github.com/gregoriof_challenge/utils"
 	"github.com/stretchr/stew/slice"
+	"net/http"
 	"errors"
 )
 
+// Constant intended array
 var validTypes = []string{"credit", "debit"}
 
 func validTransaction(transaction *models.Transaction) (bool, string) {
@@ -24,13 +27,19 @@ func List() ([]models.Transaction, error) {
 	return transactions, nil
 }
 
-func Create(transaction *models.Transaction) (*models.Transaction, error) {
+func Create(transaction *models.Transaction) (*models.Transaction, *utils.CustomError) {
 	if valid, err := validTransaction(transaction) ; !valid {
-		return nil, errors.New(err)
+		return nil, &utils.CustomError {
+			Error: errors.New(err),
+			Status: http.StatusBadRequest,
+		}
 	}
 	transactionEntity, err := database.CreateTransaction(transaction)
 	if err != nil {
-		return nil, err
+		return nil, &utils.CustomError {
+			Error: errors.New("Unexpected error creating transaction"),
+			Status: http.StatusInternalServerError,
+		}
 	}
 	return transactionEntity, nil
 }

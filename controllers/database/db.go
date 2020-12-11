@@ -1,7 +1,7 @@
 package database
 
 import (
-	"challenge/models"
+	"github.com/gregoriof_challenge/models"
 	"sync"
 	"time"
 	"fmt"

@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 	"github.com/gorilla/mux"
-	"challenge/routes"
+	"github.com/gregoriof_challenge/routes"
 	_ "net/http/pprof"
 )
 

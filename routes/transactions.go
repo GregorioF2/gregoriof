@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 	"fmt"
-	"challenge/controllers/transactions"
-	"challenge/models"
+	"github.com/gregoriof_challenge/controllers/transactions"
+	"github.com/gregoriof_challenge/models"
 	"strconv"
 	"strings"
 )
@@ -29,10 +29,10 @@ func CreateTransaction(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		http.Error(w, "Invalid json structure. Must be json with 'type' and 'ammount' ", 400)
 	}
-	createdTransaction, err := transactions.Create(&transaction)
+	createdTransaction, customError := transactions.Create(&transaction)
 
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+	if customError != nil {
+		http.Error(w, customError.Error.Error(), customError.Status)
 		return
 	}
 
