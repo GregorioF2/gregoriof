@@ -1,8 +1,8 @@
 ### Install gregoriof_challenge
 
-* clone repo inside ${GO_PATH}/github.com/gregoriof/
-  `git clone https://github.com/GregorioF2/gregoriof.git`
-* Go to ${GO_PATH}/github.com/gregoriof/
+* clone repo inside `${GO_PATH}/github.com/gregoriof/` with <br/>
+  `git clone https://github.com/GregorioF2/gregoriof.git`<br/>
+* Go to `${GO_PATH}/github.com/gregoriof/`<br/>
 * Install dependencies with
   `go get`
 
