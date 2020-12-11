@@ -1,9 +1,9 @@
 package transactions
 
 import (
-	"github.com/gregoriof_challenge/models"
-	"github.com/gregoriof_challenge/controllers/database"
-	"github.com/gregoriof_challenge/utils"
+	"github.com/gregoriof/models"
+	"github.com/gregoriof/controllers/database"
+	"github.com/gregoriof/utils"
 	"github.com/stretchr/stew/slice"
 	"net/http"
 	"errors"

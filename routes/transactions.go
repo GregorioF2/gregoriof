@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 	"fmt"
-	"github.com/gregoriof_challenge/controllers/transactions"
-	"github.com/gregoriof_challenge/models"
+	"github.com/gregoriof/controllers/transactions"
+	"github.com/gregoriof/models"
 	"strconv"
 	"strings"
 )

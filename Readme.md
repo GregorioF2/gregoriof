@@ -1,9 +1,8 @@
 ### Install gregoriof_challenge
 
-* Install repo with 
-  `go get https://github.com/GregorioF2/gregoriof_challenge.git`
-* Go to ${GO_PATH}/github.com/gregoriof_challenge/
-  `cd PGN-Parser`  
+* clone repo inside ${GO_PATH}/github.com/gregoriof/
+  `git clone https://github.com/GregorioF2/gregoriof.git`
+* Go to ${GO_PATH}/github.com/gregoriof/
 * Install dependencies with
   `go get`
 
