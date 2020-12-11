@@ -3,7 +3,7 @@
 * clone repo inside `${GO_PATH}/github.com/gregoriof/` with <br/>
   `git clone https://github.com/GregorioF2/gregoriof.git`<br/>
 * Go to `${GO_PATH}/github.com/gregoriof/`<br/>
-* Install dependencies with
+* Install dependencies with <br/>
   `go get`
 
 ### Test server
