@@ -10,3 +10,6 @@
 
 * Run with
   `go run main.go`
+
+### UI
+UI located on `https://github.com/GregorioF2/gregoriof_ui`
