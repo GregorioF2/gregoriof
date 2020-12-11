@@ -1,4 +1,4 @@
-### Install gregoriof_challenge
+### Install gregoriof repo
 
 * clone repo inside `${GO_PATH}/github.com/gregoriof/` with <br/>
   `git clone https://github.com/GregorioF2/gregoriof.git`<br/>
@@ -6,7 +6,7 @@
 * Install dependencies with <br/>
   `go get`
 
-### Test server
+### Run server
 
 * Run with
   `go run main.go`
